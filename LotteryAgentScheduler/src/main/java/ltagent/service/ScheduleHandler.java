@@ -14,7 +14,7 @@ public class ScheduleHandler {
 	@Autowired
 	private LotteryAgentScheduleService lotteryAgentScheduleService;
 
-	@Scheduled(cron = "0 0 0 ? * MON-SAT") 
+	@Scheduled(cron = "0 0 12 ? * MON-SAT") 
 	public void getDailyNumber() {
 		
 		lotteryAgentScheduleService.getDailyTargetNumber();
